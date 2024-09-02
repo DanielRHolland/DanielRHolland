@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=https://danrh.net">
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .message {
+            display: none;
+        }
+        .fallback {
+            display: block;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    <script>
+        // If the meta redirect does not work, show the fallback message
+        window.onload = function() {
+            setTimeout(function() {
+                var fallbackMessage = document.querySelector('.fallback');
+                fallbackMessage.style.display = 'block';
+            }, 1000); // Delay to account for the meta refresh
+        };
+    </script>
+</head>
+<body>
+    <div class="message fallback">
+        <p>The site has moved to <a href="https://danrh.net">danrh.net</a>. If you are not redirected automatically, please click the link.</p>
+    </div>
+</body>
+</html>
